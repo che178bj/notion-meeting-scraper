@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "notion-meeting-scraper"
+version = "1.0.0"
+description = "Notion 會議記錄爬蟲 - 自動爬取並輸出 Markdown"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    {name = "JC", email = "che178bj@gmail.com"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "playwright>=1.40.0",
+    "pyyaml>=6.0",
+    "click>=8.0.0",
+]
+
+[project.scripts]
+notion-scrape = "src.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]

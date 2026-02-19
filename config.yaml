@@ -1,0 +1,78 @@
+# Notion Meeting Scraper 設定檔
+# 版本：1.0.0
+
+# ==================== 輸出設定 ====================
+output:
+  # 輸出資料夾
+  folder: "./output"
+  
+  # 檔名日期格式
+  date_format: "%Y%m%d"
+  
+  # 檔名清理
+  sanitize:
+    replace_slash: "-"
+    replace_ampersand: "and"
+    replace_space: "_"
+    max_length: 50
+
+# ==================== Notion 頁面設定 ====================
+notion:
+  categories:
+    # 1. APP 月會
+    - name: "APP月會"
+      url: "https://www.notion.so/APP-2b6d1d3a5f4e80c39836ff678f90050a"
+      enabled: true
+    
+    # 2. 數據週會議
+    - name: "數據週會議"
+      url: "https://www.notion.so/2b6d1d3a5f4e8051b86fd9afa4e1f049"
+      enabled: true
+    
+    # 3. Shopper 自動化與發票快查
+    - name: "Shopper自動化&發票快查"
+      url: "https://www.notion.so/Shopper-2b6d1d3a5f4e808eb026ed8642c9487a"
+      enabled: true
+    
+    # 4. HAPPY GENIE 專案
+    - name: "HAPPY GENIE專案"
+      url: "https://www.notion.so/HAPPY-GENIE-2b6d1d3a5f4e8067a6a7dcfe18411dc0"
+      enabled: true
+    
+    # 5. 自動化/醫療
+    - name: "自動化/醫療"
+      url: "https://www.notion.so/2cbd1d3a5f4e80b28a2cd3e276b4f00e"
+      enabled: true
+    
+    # 6. 市調報價 AI
+    - name: "市調報價AI"
+      url: "https://www.notion.so/AI-2a9d1d3a5f4e80638623e9d5b4ac1685"
+      enabled: true
+    
+    # 7. GM 雙週會
+    - name: "GM雙週會"
+      url: "https://www.notion.so/GM-2b6d1d3a5f4e8052a54bcba1dba32c43"
+      enabled: true
+    
+    # 8. 顧客洞察專案（自動發現子分類）
+    - name: "顧客洞察專案"
+      url: "https://www.notion.so/2b6d1d3a5f4e804bb503c9fae827ebf8"
+      enabled: true
+    
+    # 9. 虛擬受訪者
+    - name: "虛擬受訪者"
+      url: "https://www.notion.so/2e5d1d3a5f4e8022940fdec4b55bbb2a"
+      enabled: true
+
+# ==================== 爬蟲設定 ====================
+crawl:
+  timeout: 60000
+  wait_time: 4000
+  max_pages_per_category: 10
+
+# ==================== 選項功能 ====================
+options:
+  date_reference: "2026-02-12"
+  verbose: true
+  extract_summary: true
+  extract_notes: true
